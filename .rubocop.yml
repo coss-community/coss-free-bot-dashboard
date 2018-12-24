@@ -1,0 +1,44 @@
+require: rubocop-rspec
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'bin/**/*'
+  TargetRubyVersion: 2.5.1
+Rails:
+    Enabled: true
+
+Metrics/LineLength:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Rails/InverseOf:
+  Enabled: false
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+Rails/OutputSafety:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
+RSpec/ExampleLength:
+  Enabled: false
+RSpec/EmptyExampleGroup:
+  Enabled: false
+RSpec/MessageSpies:
+  EnforcedStyle: receive

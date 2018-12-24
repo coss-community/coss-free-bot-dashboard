@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  font-family: Tahoma;
+
+}
+
+.value {
+  float: right;
+}
+
+#bot-card {
+  font-size: 11px;
+}
+
+.status-err {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ef3d47;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.status-ok {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00ff7f;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.bot-card-outer {
+  background: #fffacd;
+  border: #fddaad dashed 2px;
+  border-radius: 1em;
+  padding: 1em;
+
+}
+
+

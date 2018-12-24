@@ -1,0 +1,57 @@
+{
+  "name": "Basic buy-low-sell-high bot for coss.io",
+  "description": "This bot works on Heroku free plan and show a basic dashboard",
+  "keywords": [
+    "COSS",
+    "cryptocurrency",
+    "exchange",
+    "API",
+    "bot",
+    "dashboard"
+  ],
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
+  "repository": "https://github.com/coss-community/coss-free-bot-dashboard",
+  "formation": {
+    "web": { "quantity": 1, "size": "free" },
+    "worker": { "quantity": 1, "size": "free" }
+  },
+  "env": {
+    "LOT_SIZE": {
+      "description": "This is how much tokens you will trade per cycle",
+      "value": "10"
+    },
+    "INTERVAL": {
+      "description": "This is how often your cycles would happen",
+      "value": "3600"
+    },
+    "PROFIT": {
+      "description": "Profit level in %",
+      "value": "0.3"
+    },
+    "PAIR": {
+      "description": "This is your trading pair",
+      "value": "COSS_ETH"
+    },
+    "TRADE_LIMIT": {
+      "description": "if your hodlings of coinToCheckWallet fall under this value the bot doesn't trade",
+      "value": "0.1"
+    },
+    "PUBLIC_KEY": {
+      "description": "Should be generated in your COSS profile",
+      "value": "URPublicKey"
+    },
+    "PRIVATE_KEY": {
+      "description": "Should be generated in your COSS profile",
+      "value": "URPrivateKey"
+    },
+    "BOT_PERSONALIZATION": {
+      "description": "Set to 'NO' or leave it blank if you don't like bot personalization: unique name and avatar",
+      "value": "YES"
+    }
+  }
+}

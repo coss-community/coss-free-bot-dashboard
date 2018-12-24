@@ -1,0 +1,59 @@
+<div class='row'>
+  <div class='col-lg-4 col-md-3 col-xs-14'></div>
+
+
+  <div class='col-lg-4 col-md-6 col-xs-10'>
+    <br>
+    <div class='bot-card-outer'>
+      <br>
+      <% if Rails.application.secrets[:bot_personalization].to_s.upcase == 'YES' %>
+        <div class='text-center'>
+          <%= image_tag(@random_user['results'].first['picture']['large'], class: 'rounded-circle') %>
+          <h3>
+            <%= @bot_name %>
+          </h3>
+        </div>
+      <% end %>
+
+      <div id='bot-card'>
+        <span class='param'>Volume</span>
+        <span class='value'><%= "#{@stat.volume_produced.round(6)} #{@r_currency}" %></span>
+        <hr>
+        <span class='param'>Profit</span>
+        <span class='value'><%= "#{@stat.profit_gained.round(6)} #{@r_currency}" %></span>
+        <hr>
+        <span class='param'>Fees Paid</span>
+        <span class='value'>
+          <%= "#{@stat.fees_paid_right.round(6)} #{@r_currency}" %> /
+          <%= "#{@stat.fees_paid_left.round(6)} #{@l_currency}" %> /
+          <%= "#{@stat.fees_paid_cft.round(6)} CFT" %>
+        </span>
+        <br/>
+        <br/>
+        <div class='progress'>
+          <div class='progress-bar progress-bar-striped'
+                aria-valuenow="<%= @stat.trades_completed %>"
+                aria-valuemin="0"
+                aria-valuemax="<%= @stat.trades_completed + Trade.count %>"
+                style="width: <%= ((@stat.trades_completed.to_f / (@stat.trades_completed + Trade.count).to_f) * 100) rescue 0 %>%;"
+          >
+            <%= @stat.trades_completed %>
+            /
+            <%= @stat.trades_completed + Trade.count %>
+          </div>
+        </div>
+        <div class='text-center'>Trades completed</div>
+
+      </div>
+      <div class='text-center'>
+        <span class="status-<%= @status_name %>" title="<%= @status['message'] || @status['error'] %>">&nbsp;</span>
+      </div>
+
+    </div>
+    <div class='text-right'><small>Last update: <i><%= @stat.updated_at %></i></small></div>
+  </div>
+
+
+  <div class='col-lg-4 col-md-3 col-xs-1'></div>
+
+</div>
