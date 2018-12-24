@@ -23,7 +23,7 @@ You will be asked to setup bot with your variables.
 
 Click "Deploy" button. Wait couple of minutes while bot is deploying. Use "View app" to see the dashboard.
 
-This bot is running and its dashboard is available at: https://bot.coss.community
+This bot is running and its dashboard is available at: http://bot.coss.community
 
 It uses ETH wallet for trading which you can use for donations and keeping him running. Current bot lot size if 10.777 so you can see it running on the exchange.
 
