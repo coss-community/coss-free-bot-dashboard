@@ -6,7 +6,7 @@
     <br>
     <div class='bot-card-outer'>
       <br>
-      <% if Rails.application.secrets[:bot_personalization].to_s.upcase == 'YES' %>
+      <% if Rails.application.secrets[:bot_personalization] %>
         <div class='text-center'>
           <%= image_tag(@random_user['results'].first['picture']['large'], class: 'rounded-circle') %>
           <h3>
