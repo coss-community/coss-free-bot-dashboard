@@ -51,7 +51,7 @@ GEM
     byebug (10.0.2)
     concurrent-ruby (1.1.4)
     coss_api_ruby_wrapper (0.1.2)
-    coss_bot (0.1.6)
+    coss_bot (0.1.7)
       coss_api_ruby_wrapper (= 0.1.2)
     crass (1.0.4)
     erubi (1.8.0)
@@ -161,7 +161,7 @@ DEPENDENCIES
   awesome_print
   bootsnap (>= 1.1.0)
   byebug
-  coss_bot (~> 0.1)
+  coss_bot (= 0.1.7)
   listen (>= 3.0.5, < 3.2)
   pg
   puma (~> 3.11)

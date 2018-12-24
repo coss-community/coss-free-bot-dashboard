@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-gem 'coss_bot', '~> 0.1'
+gem 'coss_bot', '0.1.7'
 
 gem 'pg'
 gem 'puma', '~> 3.11'
