@@ -20,6 +20,7 @@ You will be asked to setup bot with your variables.
 | TRADE_LIMIT   | If pair is COSS_ETH and your ETH balance is lower than this value, trading cycle will be skiped |
 | PUBLIC_KEY    | Should be created in coss profile |
 | PRIVATE_KEY   | Should be created in coss profile |
+| BOT_PERSONALIZATION | Turn off bot Avatar/Name by setting this values to anything except of 'yes' |
 
 Click "Deploy" button. Wait couple of minutes while bot is deploying. Use "View app" to see the dashboard.
 
