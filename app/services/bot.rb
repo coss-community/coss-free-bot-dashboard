@@ -15,6 +15,7 @@ class Bot
       BotStat.new.call
       Trade.create!(buy_order_id: buy_order['order_id'], sell_order_id: sell_order['order_id']) if error.blank?
       res = error.presence || { status: 200, message: 'OK' }
+      stat.updated_at = Time.zone.now
       stat.update(last_trade_status: res.to_json)
     end
   end
