@@ -27,4 +27,14 @@ This bot is running and its dashboard is available at: http://bot.coss.community
 
 It uses ETH wallet for trading which you can use for donations and keeping him running. Current bot lot size if 10.76 so you can see it running on the exchange.
 
+## Donation/fueling ETH address
+
 0xbbd84ece935c538007dc0d6b5ef774d19e7ed993 (ETH)
+
+## FAQ
+
+https://github.com/coss-community/coss-free-bot-dashboard/wiki/FAQ
+
+## Known bot limitations and issues
+
+https://github.com/coss-community/coss-free-bot-dashboard/wiki/Known-bot-limitations-and-issues
