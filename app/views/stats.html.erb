@@ -48,7 +48,10 @@
       <div class='text-center'>
         <span class="status-<%= @status_name %>">&nbsp;</span>
         <% if @status_name == 'err' %>
-          <pre><small><%= @status['message'] || @status['error'] %></small></pre>
+          <hr/>
+          <small>
+            <%= @status['message'] || @status['error'] %>
+          </small>
         <% end %>
       </div>
 
