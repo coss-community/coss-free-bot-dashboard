@@ -46,7 +46,10 @@
 
       </div>
       <div class='text-center'>
-        <span class="status-<%= @status_name %>" title="<%= @status['message'] || @status['error'] %>">&nbsp;</span>
+        <span class="status-<%= @status_name %>">&nbsp;</span>
+        <% if @status_name == 'err' %>
+          <pre><small><%= @status['message'] || @status['error'] %></small></pre>
+        <% end %>
       </div>
 
     </div>
