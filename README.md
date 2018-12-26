@@ -26,7 +26,7 @@ Click "Deploy" button. Wait couple of minutes while bot is deploying. Use "View 
 
 This bot is running and its dashboard is available at: http://bot.coss.community
 
-It uses ETH wallet for trading which you can use for donations and keeping him running. Current bot lot size if 10.76 so you can see it running on the exchange.
+It uses ETH wallet for trading which you can use for donations and keeping him running. Current bot lot size if 49.77 so you can see it running on the exchange.
 
 ## Donation/fueling ETH address
 

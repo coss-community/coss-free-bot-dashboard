@@ -23,7 +23,7 @@
   "env": {
     "LOT_SIZE": {
       "description": "This is how much tokens you will trade per cycle",
-      "value": "10"
+      "value": "50"
     },
     "INTERVAL": {
       "description": "This is how often your cycles would happen",
