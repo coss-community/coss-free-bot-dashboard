@@ -1,13 +1,17 @@
 # frozen_string_literal: true
 
 class BotStat
-  def call
-    exchange = CossApiRubyWrapper::Exchange.new(public_key: Rails.application.secrets[:public_key], private_key: Rails.application.secrets[:private_key])
-    stat = Stat.first_or_create
-    trade_processor = TradeProcessor.new(exchange, stat)
-    Trade.all.each do |trade|
-      trade_processor.call(trade)
-      sleep(0.5)
+  def call(bot, stat)
+    loop do
+      trades = Trade.all
+      trade_processor = TradeProcessor.new(bot.exchange, stat)
+      bot.logger.info("Processing #{trades.size} Trades")
+
+      trades.each do |trade|
+        trade_processor.call(trade)
+        sleep(1)
+      end
+      sleep(10)
     end
   end
 end

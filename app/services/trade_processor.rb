@@ -28,7 +28,7 @@ class TradeProcessor
     end
     stat.increment(:trades_completed, 1)
 
-    stat.save!
+    stat.save!(touch: false)
     trade.delete
   end
 end

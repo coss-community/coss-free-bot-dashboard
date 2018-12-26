@@ -4,9 +4,8 @@ require 'open-uri'
 
 class ApplicationController < ActionController::Base
   def stats
-    @stat = Stat.first_or_create
-    bot_seed = BotSeed.new.call
-    @random_user = JSON.parse(open(URI("https://randomuser.me/api/?seed=#{bot_seed}&inc=name,picture")).read)
+    @stat = Stat.instance
+    @random_user = JSON.parse(open(URI("https://randomuser.me/api/?seed=#{BotSeed.new.call}&inc=name,picture")).read)
     @bot_name = [@random_user['results'].first['name']['first'].titleize, @random_user['results'].first['name']['last'].titleize].join(' ')
     @l_currency = Rails.application.secrets[:pair].split('_').first
     @r_currency = Rails.application.secrets[:pair].split('_').last
