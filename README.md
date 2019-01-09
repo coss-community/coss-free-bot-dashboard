@@ -12,7 +12,7 @@ You will be asked to setup bot with your variables.
 
 | Parameter     | Description                                              |
 | ------------- | -------------------------------------------------------- |
-| App name      | Assuming its "coss_bot", dashboard will be available at: coss_bot.herokuapp.com |
+| App name      | Assuming its "coss-bot", dashboard will be available at: coss-bot.herokuapp.com |
 | LOT_SIZE      | How many tokens will be traded per cycle                 |
 | INTERVAL      | How often trading cycle will happen                      |
 | PROFIT        | Estimated profit for each trade                          |
@@ -21,12 +21,13 @@ You will be asked to setup bot with your variables.
 | PUBLIC_KEY    | Should be created in coss profile |
 | PRIVATE_KEY   | Should be created in coss profile |
 | BOT_PERSONALIZATION | Turn off bot Avatar/Name by setting this values to anything except of 'yes' |
+| BOT_STRATEGY | Currently 'BEAR' or 'BULL' |
 
 Click "Deploy" button. Wait couple of minutes while bot is deploying. Use "View app" to see the dashboard.
 
 This bot is running and its dashboard is available at: http://bot.coss.community
 
-It uses ETH wallet for trading which you can use for donations and keeping him running. Current bot lot size if 49.77 so you can see it running on the exchange.
+It uses ETH wallet for trading which you can use for donations and keeping him running. Current bot lot size if 99.97 so you can see it running on the exchange.
 
 ## Donation/fueling ETH address
 
