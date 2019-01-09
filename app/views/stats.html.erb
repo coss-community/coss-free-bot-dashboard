@@ -54,10 +54,11 @@
             <%= @status['message'] || @status['error'] %>
           </small>
         <% end %>
+        <hr/>
+        <div class='text-right'><small>Last update: <i><%= @stat.updated_at %></i></small></div>
       </div>
 
     </div>
-    <div class='text-right'><small>Last update: <i><%= @stat.updated_at %></i></small></div>
   </div>
 
 
