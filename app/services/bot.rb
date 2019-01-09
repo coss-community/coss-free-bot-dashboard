@@ -5,7 +5,7 @@ class Bot
 
   def initialize
     secrets = Rails.application.secrets
-    @bot = case secrets['BOT_STRATEGY'].to_s.upcase
+    @bot = case secrets.bot_strategy.to_s.upcase
            when 'BEAR'
              CossBot::SellHighBuyLow.new(public_key: secrets[:public_key], private_key: secrets[:private_key])
            when 'BULL'

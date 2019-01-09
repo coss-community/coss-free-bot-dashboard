@@ -9,7 +9,7 @@ class TradeProcessor
   end
 
   def call(trade)
-    case Rails.application.secrets['BOT_STRATEGY'].to_s.upcase
+    case Rails.application.secrets.bot_strategy.to_s.upcase
     when 'BEAR'
       # We assume that if BUY order (with lower price) is FILLED then SELL order (with higher price) is also FILLED
       buy_order_details = exchange.order_details(trade.buy_order_id)
