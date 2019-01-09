@@ -52,6 +52,10 @@
     "BOT_PERSONALIZATION": {
       "description": "Set to 'NO' or leave it blank if you don't like bot personalization: unique name and avatar",
       "value": "YES"
+    },
+    "BOT_STRATEGY": {
+      "description": "Currently available 'bear' or 'bull",
+      "value": "BULL"
     }
   }
 }

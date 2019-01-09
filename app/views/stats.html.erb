@@ -4,6 +4,7 @@
 
   <div class='col-lg-4 col-md-6 col-xs-10'>
     <br>
+    <%= image_tag("#{Rails.application.secrets.bot_strategy}.png", class: Rails.application.secrets.bot_strategy) %>
     <div class='bot-card-outer'>
       <br>
       <% if Rails.application.secrets[:bot_personalization] %>

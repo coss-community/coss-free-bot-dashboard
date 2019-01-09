@@ -5,7 +5,14 @@ class Bot
 
   def initialize
     secrets = Rails.application.secrets
-    @bot = CossBot::BuyLowSellHigh.new(public_key: secrets[:public_key], private_key: secrets[:private_key])
+    @bot = case secrets['BOT_STRATEGY'].to_s.upcase
+           when 'BEAR'
+             CossBot::SellHighBuyLow.new(public_key: secrets[:public_key], private_key: secrets[:private_key])
+           when 'BULL'
+             CossBot::BuyLowSellHigh.new(public_key: secrets[:public_key], private_key: secrets[:private_key])
+           else
+             raise ArgumentError, 'Unknown Bot Strategy'
+           end
     bot.interval = secrets[:interval]
     bot.lot_size = secrets[:lot_size]
     bot.profit = secrets[:profit]

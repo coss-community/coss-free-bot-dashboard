@@ -51,7 +51,24 @@ body {
   border: #fddaad dashed 2px;
   border-radius: 1em;
   padding: 1em;
+  z-index: 10;
+  position: absolute;
 
 }
 
+.BULL {
+  z-index: 1;
+  position: absolute;
+  right: -180px;
+  top: 100px;
+  display: block;
+}
+
+.BEAR {
+  z-index: 1;
+  position: absolute;
+  left: -140px;
+  top: 200px;
+  display: block;
+}
 
