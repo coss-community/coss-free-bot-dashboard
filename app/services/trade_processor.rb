@@ -24,6 +24,7 @@ class TradeProcessor
 
     buy_details = exchange.trade_detail(trade.buy_order_id)
     sell_details = exchange.trade_detail(trade.sell_order_id)
+    return if buy_details.nil? || sell_details.nil?
     stat.reload
 
     stat.increment(:profit_gained, (sell_details.sum { |o| o['total'].to_f } - buy_details.sum { |o| o['total'].to_f }))
